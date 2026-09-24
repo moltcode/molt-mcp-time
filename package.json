@@ -1,0 +1,39 @@
+{
+  "name": "molt-mcp-time",
+  "version": "0.1.0",
+  "description": "Tiny time & timezone MCP server. Zero-dependency Go binary per platform; the reference self-contained plugin for the Molt plugin system.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/junaid1460/molt-mcp-time"
+  },
+  "files": [
+    "dist"
+  ],
+  "molt": {
+    "manifestVersion": 1,
+    "displayName": "Time Tools",
+    "kinds": ["mcp"],
+    "platforms": ["darwin-arm64", "darwin-x64", "linux-x64", "linux-arm64", "win32-x64"],
+    "contributes": {
+      "mcpServers": {
+        "time": {
+          "name": "Time Tools",
+          "description": "current_time, unix_timestamp and add_duration tools",
+          "transport": "stdio",
+          "command": "dist/${platform}/molt-mcp-time${exe}",
+          "args": [],
+          "parameters": [
+            {
+              "key": "MOLT_TIME_DEFAULT_TZ",
+              "kind": "env",
+              "label": "Default timezone",
+              "description": "IANA timezone used when a tool call omits one, e.g. Asia/Kolkata",
+              "required": false
+            }
+          ]
+        }
+      }
+    }
+  }
+}
