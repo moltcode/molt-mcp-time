@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/junaid1460/molt-mcp-time"
+    "url": "https://github.com/moltcode/molt-mcp-time"
   },
   "files": [
     "dist"
