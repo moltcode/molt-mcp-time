@@ -1,3 +1,3 @@
-module github.com/junaid1460/molt-mcp-time
+module github.com/moltcode/molt-mcp-time
 
 go 1.23.11
